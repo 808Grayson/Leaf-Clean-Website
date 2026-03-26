@@ -46,17 +46,20 @@
 
 .section-gallery img{
     object-fit: cover;
-    width: 100%;
-    max-width: 50vw;
-    height: auto;
+
+    width: clamp(400px, 30vw, 80vw);
+    aspect-ratio: 1 / 1;
+
     display: block;
     border-radius: 12px;
     border: 10px solid white;
     transition: var(--transition);
 }
-
+/* 
 .section-gallery img:hover{
     scale: 1.1;
     transform: translateY(30px);
 }
+ */
 
+ 

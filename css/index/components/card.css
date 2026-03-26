@@ -1,7 +1,8 @@
 
 .card {
-    background: var(--card-color);
     width: 350px;
+    height: 100%;
+    background: var(--card-color);
     border-radius: 20px;
     overflow: hidden;
     transition: var(--transition);
@@ -25,3 +26,8 @@
     transform: scale(1.1);
 }
 
+.card-link {
+    text-decoration: none; 
+    color: inherit;        
+    display: block;        
+}
