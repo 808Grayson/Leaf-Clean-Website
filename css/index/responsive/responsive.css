@@ -10,6 +10,11 @@
     .section-gallery img {max-width: 100%;}
 }
 
+@media (max-width: 768px) {
+    .section-services .title-wrapper {grid-template-columns: 1fr;}
+}
+
+
 @media (max-width: 992px) { 
     .landing-page-title-container {
         width: 80%;
