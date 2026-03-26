@@ -1,0 +1,30 @@
+/* Footer - "Logbook" */
+footer {
+    background: var(--primary-blue);
+    color: var(--white);
+    padding: 1rem 5%;
+    text-align: center;
+}
+
+footer .info a {
+    color: var(--white);
+    text-decoration: none;
+    margin: 20px 15px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+}
+
+footer img {
+    height: 1.5rem;
+    width: 1.5rem;
+    filter: invert(1);
+    margin: 0 10px;
+}
+
+footer .info a:hover {
+    transform: translateY(-10px);
+}

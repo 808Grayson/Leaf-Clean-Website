@@ -1,0 +1,11 @@
+@import "index/animations/animations.css";
+@import "index/components/btn-book.css";
+@import "index/components/card.css";
+@import "index/components/contact-form.css";
+@import "index/layout/services.css";
+@import "index/layout/footer.css";
+@import "index/layout/landing-page.css";
+@import "index/layout/pricing.css";
+@import "index/layout/contact.css";
+@import "index/responsive/responsive.css";
+@import "index/layout/gallery.css";

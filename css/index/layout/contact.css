@@ -1,0 +1,59 @@
+
+/* Contact Section - "The Terminal" */
+.section-contact {
+    background: linear-gradient(rgba(10, 35, 66, 0.85), rgba(10, 35, 66, 0.85));
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 100px 5%;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-container {
+    background: var(--white);
+    max-width: 850px;
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+}
+
+.contact-header {
+    background: var(--primary-blue);
+    padding: 2.5rem;
+    text-align: center;
+    color: var(--white);
+}
+
+.contact-header h2 {
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.trucking-form {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.trucking-form input, 
+.trucking-form select, 
+.trucking-form textarea {
+    padding: 15px;
+    border: 2px solid #eee;
+    border-radius: 6px;
+    background: #fdfdfd;
+    transition: var(--transition);
+}
+
+.trucking-form input:focus {
+    border-color: var(--primary-blue);
+    outline: none;
+}
