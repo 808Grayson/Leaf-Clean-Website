@@ -1,0 +1,153 @@
+/* Navigation - "The Dashboard" */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5%;
+    max-height: 84px;
+    height: 56px;
+    background: var(--primary-blue);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+nav .title h1 {
+    color: var(--white);
+    font-weight: 800;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+nav img {
+    width: clamp(3rem, 100px, 6.25rem);
+    height: auto;
+}
+
+nav a {
+    color: var(--white);
+    text-decoration: none;
+    margin-left: 2rem;
+    font-weight: 500;
+    position: relative;
+    transition: var(--transition);
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: var(--secondary);
+    transition: var(--transition);
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+.nav-toggle {
+        display: none;
+}
+
+
+@media (max-width: 992px) {
+    /* Move Navbar label to far right */
+    nav {
+        justify-content: end;
+    }
+
+    /* 1. Hamburger Icon Position */
+    .nav-toggle-label {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        z-index: 1001;
+        position: relative;
+    }
+
+    /* 2. The Middle Bar */
+    .nav-toggle-label span,
+    .nav-toggle-label span::before,
+    .nav-toggle-label span::after {
+        display: block;
+        height: 3px;
+        width: 30px;
+        border-radius: 4px;
+        position: absolute;
+        transition: all 0.3s ease-in-out;
+        background: white;
+    }
+
+    /* 3. The Top and Bottom Bars */
+    .nav-toggle-label span::before {
+        content: '';
+        top: -10px; /* Distance above middle bar */
+    }
+
+    .nav-toggle-label span::after {
+        content: '';
+        top: 10px; /* Distance below middle bar */
+    }
+
+    /* 4. The "X" Animation Logic */
+    #nav-toggle:checked ~ .nav-toggle-label span {
+        background: transparent; /* Hide the middle bar */
+    }
+
+    #nav-toggle:checked ~ .nav-toggle-label span::before {
+        transform: rotate(45deg);
+        top: 0;
+    }
+
+    #nav-toggle:checked ~ .nav-toggle-label span::after {
+        transform: rotate(-45deg);
+        top: 0;
+    }
+
+    /* 5. Hide the Checkbox */
+    .nav-toggle {
+        display: none;
+    }
+
+    /* 2. Sidebar Container */
+    .link-buttons {
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        top: 0;
+        right: -300px; /* Start hidden off-screen to the right */
+        width: 280px;  /* Width of your sidebar */
+        height: 100vh; /* Full screen height */
+        background: var(--primary-blue);
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 80px 20px 20px 20px; /* Top padding to avoid logo/toggle */
+        transition: right 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+        box-shadow: -5px 0 15px rgba(0,0,0,0.3);
+        z-index: 1000;
+    }
+
+    /* 3. Sidebar Links */
+    .link-buttons a {
+        width: 100%;
+        margin: 0 0 15px 0;
+        padding: 15px;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+        font-size: 1.1rem;
+    }
+
+    /* 4. The Trigger: Slide in when checked */
+    .nav-toggle:checked ~ .link-buttons {
+        right: 0;  
+    }
+
+}
+

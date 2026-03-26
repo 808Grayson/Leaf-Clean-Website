@@ -1,0 +1,34 @@
+/* Animations */
+@keyframes driveInLeft {
+    from { opacity: 0; transform: translateX(-150px) skewX(20deg); }
+    to { opacity: 1; transform: translateX(0) skewX(0); }
+}
+
+@keyframes driveInRight {
+    from { opacity: 0; transform: translateX(150px) skewX(-20deg); }
+    to { opacity: 1; transform: translateX(0) skewX(0); }
+}
+
+@keyframes fadeUp {
+    from{opacity:0; transform: translateY(150px);}
+    to{opacity: 1; transform:translateY(0)}
+}
+
+@keyframes driveOutRight {
+    0% {
+        transform: translateX(0);
+    }
+    45% {
+        transform: translateX(40px);
+        opacity: 1;
+    }
+    45.1% {
+        transform: translateX(-40px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    
+}

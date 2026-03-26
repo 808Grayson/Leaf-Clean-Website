@@ -1,0 +1,62 @@
+
+
+/* Landing Page - "Full Throttle" */
+.section-landing-page {
+    position: relative;
+    height: 90vh;
+    background: linear-gradient(135deg, var(--primary-blue) 0%, #1a1a1a 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    color: var(--white);
+    overflow: hidden;
+}
+
+.landing-page-title-container {
+    background: rgba(255, 255, 255, 0.05); /* Very light transparent white */
+    backdrop-filter: blur(12px); /* This creates the frost/blur effect */
+    -webkit-backdrop-filter: blur(12px); /* Safari support */
+    
+    padding: 2rem 3rem;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle "edge" of the glass */
+    width: fit-content;
+    
+    z-index: 10; /* Ensures it sits above your image and dark overlay */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37); /* Depth shadow */
+}
+
+
+.landing-page-title {
+    font-size: 4rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+    animation: driveInLeft 1.2s ease-out;
+    z-index: 10;
+}
+
+.landing-page-subtitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--title);
+    max-width: 700px;
+    animation: driveInRight 1.2s ease-out;
+    z-index: 10;
+}
+
+.section-landing-page img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: fill;
+    z-index: 1;
+    filter: drop-shadow(0 20px 30px rgba(0,0,0,0.5));
+    transition: transform 0.6s ease;
+    filter:  brightness(0.7);
+}
+
